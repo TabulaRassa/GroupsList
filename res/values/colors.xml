@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<color name="background">#3300ffff</color>
+	<color name="text">#AA0000FF</color>
+	<color name="people_text">#AA00ff00</color>
+	<color name="people_background">#FF000000</color>
+
+</resources>

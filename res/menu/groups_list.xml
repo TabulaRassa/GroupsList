@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="ua.pp.igor_m.groupslist.GroupsList" >
+    
+    <item
+        android:id="@+id/db_h"
+        android:orderInCategory="100"
+        android:title="работа с БД"
+        app:showAsAction="never"/>
+
+</menu>

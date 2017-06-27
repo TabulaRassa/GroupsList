@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string name="app_name">Groups List</string>
+	<string name="action_settings">Settings</string>
+	<string name="strPeople">Возвещатели</string>
+	<string name="strBooks">Публикации</string>
+	<string name="strExit">Выход</string>
+	<string name="add">Добавить</string>
+	<string name="del">Удалить</string>
+	<string name="edit">Редактировать</string>
+	<string name="saveCapture">Сохранить</string>
+	<string name="errorButton">OK</string>
+	<string name="errorTitle">Нет имени</string>
+	<string name="errorMessage">Необходимо ввести имя</string>
+	<string name="strSetDate">Указать дату</string>
+	<string name="confirmTitle">Вы уверены?</string>
+	<string name="confirmMessage">Запись будет удалена безвозвратно!</string>
+	<string name="button_cancel">Нет!</string>
+	<string name="button_delete">Удалить</string>
+	<string name="clear_list">Список пуст</string>
+	<string name="add_new_record">Добавить новую запись?</string>
+	<string name="book_name">Название</string>
+	<string name="count">Количество</string>
+	<string name="name">Имя</string>
+	<string name="phone">Телефон</string>
+	<string name="address">Адрес</string>
+	<string name="save_db">Сохранить базу данных</string>
+	<string name="db_work">Операции с данными</string>
+	<string name="readDB">Загрузить базу данных</string>
+	<string name="save_to">Сохранить в</string>
+	<string name="restore_from">Прочитать из</string>
+	<string name="add_from_phone">Из справочника</string>
+	<string name="sendMessage">Рассылка сообщений</string>
+	<string name="tvLeaderName">Надзиратель (служитель) группы</string>
+	<string name="groups_h">Группы</string>
+	<string name="create_group">Создать группу</string>
+	<string name="groups_list">Список групп</string>
+	<string name="groupLeader">Надзиратель</string>
+	<string name="people_move">Перевести</string>
+	<string name="group_name">Название группы</string>
+	<string name="delFromGroup">Удалить из группы</string>
+	<string name="setLeader">Назначить надзирателем</string>
+
+</resources>
