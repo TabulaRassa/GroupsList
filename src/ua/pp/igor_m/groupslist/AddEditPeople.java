@@ -1,5 +1,6 @@
 package ua.pp.igor_m.groupslist;
 
+import android.app.ActionBar.LayoutParams;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.database.Cursor;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 public class AddEditPeople extends Activity implements Constants
 {
@@ -23,6 +25,9 @@ public class AddEditPeople extends Activity implements Constants
   
   private GLPeople _people;
   private GLPhone _phone;
+  
+  private LayoutParams lpView;
+  private LinearLayout ll;
 
   Cursor cursor;
   Cursor cursorPh;
@@ -31,10 +36,13 @@ public class AddEditPeople extends Activity implements Constants
   protected void onCreate(Bundle savedInstanceState)
   {
     super.onCreate(savedInstanceState);
+    
+    lpView = new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT);
 
     if (Build.VERSION.SDK_INT <= 11)
     {
       setContentView(R.layout.add_people_8);
+      ll = (LinearLayout)findViewById(R.id.llAddPeople_8);
       editName = (EditText) findViewById(R.id.editName_2);
       editAddress = (EditText) findViewById(R.id.editAddress_2);
       editPhone = (EditText) findViewById(R.id.editPhone_2);
@@ -43,6 +51,7 @@ public class AddEditPeople extends Activity implements Constants
     } else
     {
       setContentView(R.layout.add_people);
+      ll = (LinearLayout)findViewById(R.id.llAddPeople);
       editName = (EditText) findViewById(R.id.editName);
       editAddress = (EditText) findViewById(R.id.editAddress);
       editPhone = (EditText) findViewById(R.id.editPhone);
@@ -65,10 +74,17 @@ public class AddEditPeople extends Activity implements Constants
         cursor.moveToFirst();
         editName.setText(cursor.getString(cursor.getColumnIndex(_NAME)));
         cursorPh = dbAdapter.getPhonesByPeople(rowId);
-        cursorPh.moveToFirst();
-        editPhone.setText(cursorPh.getString(cursorPh.getColumnIndex(_PHONE)));
+        if(cursorPh.moveToFirst())
+        {
+          editPhone.setText(cursorPh.getString(cursorPh.getColumnIndex(_PHONE)));
+          EditText et = new EditText(this);
+          et.setText(cursorPh.getString(cursorPh.getColumnIndex(_PHONE)));
+          et.setLayoutParams(lpView);
+          ll.addView(et);
+        } while (cursorPh.moveToNext());
         //editAddress.setText(cursor.getString(cursor.getColumnIndex(_ADDRESS)));
         cursor.close();
+        cursorPh.close();
         dbAdapter.close();
       }
     }

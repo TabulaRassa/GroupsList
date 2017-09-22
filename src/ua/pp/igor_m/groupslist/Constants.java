@@ -15,7 +15,6 @@ public interface Constants
   public static final String ADDRESS_TABLE = "address";
   public static final String MESSAGES_TABLE = "messages";  
   public static final String SENDED_MESSEGES_TABLE = "sended_messeges";
-  public static final String _SEND_TIME = "send_time";
   
   public static final int DB_VERSION = 3;
   
@@ -32,6 +31,7 @@ public interface Constants
   public static final String _DATE = "dt";
   public static final String _COUNT = "count";
   public static final String _SEND_SMS = "send_sms";
+  public static final String _SEND_TIME = "send_time";
   
   public static final String _TAG = "debug tag";
   

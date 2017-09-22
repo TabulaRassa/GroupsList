@@ -7,6 +7,7 @@
   android:background="@color/background" >
 
   <LinearLayout
+    android:id="@+id/llAddPeople_8"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
